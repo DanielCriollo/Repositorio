@@ -28,8 +28,8 @@
     </head>
 <body>
     <?php
-        require("../Login_Repositorio/modelo/insertar.php");
-        require("../Login_Repositorio/modelo/logearse.php");
+        require("../Repositorio/modelo/insertar.php");
+        require("../Repositorio/modelo/logearse.php");
     ?>
 
     <div class="row d-flex justify-content-center account-pages">
