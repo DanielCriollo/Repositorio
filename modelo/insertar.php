@@ -34,7 +34,11 @@
         :sexo,:estado_civil,:telefono,:correo_institucional,:correo_personal,:nombre_bibliografico,
         :tipo_investigador,:seguridad)";
 
+        $sql_tres="INSERT INTO investigador_principal(nombre, tipo_investigador_id) VALUES(:nominves,:tipoInves)";
+
         $resultado=$base->prepare($sql);
+        $resultado_tres=$base->prepare($sql_tres);
+
         $resultado->execute(array(":nom_uno"=>$nom_uno,":nom_dos"=>$nom_dos,
         ":ape_uno"=>$ape_uno,":ape_dos"=>$ape_dos,":municipio"=>$municipio,
         ":fecha_nacimiento"=>$fecha_nacimiento,":tipo_documento"=>$tipo_documento,
@@ -42,6 +46,8 @@
         ":municipio_expedicion"=>$municipio_expedicion,":sexo"=>$sexo,":estado_civil"=>$estado_civil,
         ":telefono"=>$telefono,":correo_institucional"=>$correo_institucional,":correo_personal"=>$correo_personal,
         ":nombre_bibliografico"=>$nombre_bibliografico,":tipo_investigador"=>$tipo_investigador,":seguridad"=>$contrasenas));
+
+        $resultado_tres->execute(array(":nominves"=>$nom_uno,"tipoInves"=>$tipo_investigador));
 
         header("Location:../index.php");
     }

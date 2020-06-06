@@ -44,10 +44,15 @@
                             <section>
                                 <div class="form-row">
                                     <div class="form-group col-md-12">
+                                        <label for="name" class="control-label">Primer Nombre</label>
+                                        <input type="text" class="required form-control" id="documen" name="nombre">
+                                    </div>                                    
+                                </div>
+                                <div class="form-row">
+                                    <div class="form-group col-md-12">
                                         <label for="name" class="control-label">Cedula de Ciudadania</label>
                                         <input type="number" class="required form-control" id="documen" name="documen">
-                                    </div>
-                                    
+                                    </div>                                    
                                 </div>
                                 <div class="form-row">
                                     <div class="form-group col-md-12">
@@ -60,7 +65,7 @@
                                         <button type="submit"  name="pr" id="pr" class="btn btn-primary waves-effect waves-light btn-lg">Iniciar Sesion</button>
                                     </div>
                                     <div class="form-group col-md-6 d-flex justify-content-center">                                    
-                                        <p class="text-muted mb-0">No tienes una Cuenta? <a href="../Login_Repositorio/vista/Registro_Nuevo.php" class="text-dark m-l-5"><b>Registrate</b></a></p>                                   
+                                        <p class="text-muted mb-0">No tienes una Cuenta? <a href="../Repositorio/controlador/Registro_controlador.php" class="text-dark m-l-5"><b>Registrate</b></a></p>                                   
                                     </div>
                                 </div>
                                 <div class="form-row">

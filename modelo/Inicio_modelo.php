@@ -13,12 +13,12 @@
         private $lineasEstrategicas;
         private $alcancesTematicos;
         private $tipos_poblaciones;
-        private $gruposInvestigciones;       
+        private $gruposInvestigciones;
+        private $InvestigadoresPrincipales;       
 
         public function __construct(){
-            require_once("modelo/Conectar.php");
+            require_once("../modelo/Conectar.php");
             $this->db=Conectar::conexion();
-            $this->universidades=array();
         }
 
         public function get_universidad(){
@@ -123,6 +123,14 @@
                 $this->gruposInvestigciones[]=$filas_trece;
             }
             return $this->gruposInvestigciones;
+        }
+
+        public function get_InvestigadorPrincipal(){
+            $consulta_catorce=$this->db->query("SELECT * FROM investigador_principal");
+            while($filas_catorce=$consulta_catorce->fetch(PDO::FETCH_ASSOC)){
+                $this->InvestigadoresPrincipales[]=$filas_catorce;
+            }
+            return $this->InvestigadoresPrincipales;
         }
        
 

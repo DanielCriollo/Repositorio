@@ -1,5 +1,5 @@
 <?php
-    require_once("modelo/Inicio_modelo.php");
+    require_once("../modelo/Inicio_modelo.php");
 
     $inicio=new Inicio_modelo();
     $matrizUniversidades=$inicio->get_universidad();
@@ -15,7 +15,8 @@
     $matrizAlcancesTematicos=$inicio->get_alcanceTematico();
     $matrizTiposPoblaciones=$inicio->get_tipoPoblacion();
     $matrizgruposInvestigciones=$inicio->get_grupoInvestigacion();
+    $matrizInvestigadoresPrincipales=$inicio->get_InvestigadorPrincipal();
 
-    require_once("vista/Inicio_nuevo.php");
+    require_once("../vista/Inicio_nuevo.php");
 
 ?>

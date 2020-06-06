@@ -8,7 +8,7 @@
         <meta content="Coderthemes" name="author" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <!-- App favicon -->
-        <link rel="shortcut icon" href="assets/images/favicon.ico">
+        <link rel="shortcut icon" href="../assets/images/favicon.ico">
 
         <!-- Plugins css -->
         <link href="../assets/libs/bootstrap-tagsinput/bootstrap-tagsinput.css" rel="stylesheet" />
@@ -29,6 +29,10 @@
 <body>
     <?php
         require("../modelo/InsertarDos.php");
+        session_start();
+        if(!isset($_SESSION["usuario"])){
+            header("location:Login_nuevo.php");
+        }        
     ?>
     <div class="row d-flex justify-content-center account-pages">
         <div class="col-md-10 account-pages my-5">
@@ -71,9 +75,13 @@
                             </li>
                         </ul>
                         <div class="tab-content">                                                
-                            <div class="tab-pane" id="inicio">                                                            
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
-                                <p class="mb-0">Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
+                            <div class="tab-pane" id="inicio">                        
+                                <div class="col-xl-12">
+                                    <div class="form-group col-md-6">
+                                        <label for="name" class="control-label">LE DAMOS LA BIENVENIDA DIRECTOR/A</label>
+                                        <input type="text" class="required form-control" disabled="" value="<?php echo $_SESSION["usuario"];  ?>">
+                                    </div>                                                                    
+                                </div>
                             </div>
                             <div class="tab-pane show active" id="proyecto">
                                 <div class="col-xl-12">                                
@@ -400,6 +408,30 @@
                                                                         </select>
                                                                     </div>
                                                                 </div>
+                                                                <div class="form-row">
+                                                                    <div class="form-group col-md-6">
+                                                                        <label for="name" class="control-label">Municipio</label>
+                                                                        <select class="form-control" data-toggle="select2" name="municipio">
+                                                                            <option>Select</option>
+                                                                            <optgroup label="Departamento">
+                                                                                <?php foreach($matrizMunicipios as $municipio):?>
+                                                                                    <option value="<?php echo $municipio['id']; ?>"><?php echo $municipio['nombre']; ?></option>
+                                                                                <?php endforeach;?>                                                    
+                                                                            </optgroup>
+                                                                        </select>
+                                                                    </div>
+                                                                    <div class="form-group col-md-6">
+                                                                        <label for="name" class="control-label">Investigador Principal</label>
+                                                                        <select class="form-control" data-toggle="select2" name="invetigaPrincipal">
+                                                                            <option>Select</option>
+                                                                            <optgroup label="Investigador Principal">
+                                                                                <?php foreach($matrizInvestigadoresPrincipales as $InvestigadorPrincipal):?>
+                                                                                    <option value="<?php echo $InvestigadorPrincipal['id']; ?>"><?php echo $InvestigadorPrincipal['nombre']; ?></option>
+                                                                                <?php endforeach;?>                                                    
+                                                                            </optgroup>
+                                                                        </select>
+                                                                    </div>                                                                    
+                                                                </div>
                                                             </section>
                                                         </div>
                                                         <div class="tab-pane show active" id="datos_proyecto">
@@ -569,7 +601,7 @@
                                                                                 </div>
                                                                                 <div class="form-group col-md-6">
                                                                                     <label for="name" class="control-label">No de Afectados</label>
-                                                                                    <input type="text" class="required form-control" id="name" name="numAfectados">
+                                                                                    <input type="number" class="required form-control" id="name" name="numAfectados">
                                                                                 </div>
                                                                             </div>
 

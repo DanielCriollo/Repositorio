@@ -5,5 +5,4 @@
     $login=new Login_modelo(); 
     require_once("vista/Login_nuevo.php");
 
-
 ?>

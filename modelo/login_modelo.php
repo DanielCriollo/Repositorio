@@ -1,10 +1,10 @@
 <?php
     class Login_modelo{
-        private $db;
+        private $pd;
 
         public function __construct(){
             require_once("modelo/Conectar.php");
-            $this->db=Conectar::conexion();
+            $this->pb=Conectar::conexion();
         }
 
     }

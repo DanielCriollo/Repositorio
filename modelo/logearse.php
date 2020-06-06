@@ -5,23 +5,25 @@
                 try{
                     require_once("Conectar.php");
                     $base_log=Conectar::conexion();
-                    $sql="SELECT * FROM director WHERE numero_de_documento=:login AND clave=:password";
+                    $sql="SELECT * FROM director WHERE numero_de_documento=:login AND clave=:password AND primer_nombre=:nombre";
                     $resultado=$base_log->prepare($sql);
                     $login=htmlentities(addslashes($_POST["documen"]));
                     $password=htmlentities(addslashes($_POST["contra"]));
+                    $nombre=htmlentities(addslashes($_POST["nombre"]));
                     $resultado->bindValue(":login" , $login);
                     $resultado->bindValue(":password",$password);
+                    $resultado->bindValue(":nombre",$nombre);
                     $resultado->execute();
                     $numero_registro=$resultado->rowCount();
 
                     if($numero_registro!=0){
                         //echo "<h2>Adelante</h2>";
                         session_start();
-                        $_SESSION["usuario"]=$_POST["login"];
-                        header("location:../Login_Repositorio/vista/Inicio_nuevo.php");
+                        $_SESSION["usuario"]=$_POST["nombre"];
+                        header("location:controlador/Inicio_controlador.php");
 
                     }else{
-                        header("location:../Login_Repositorio/vista/Login_nuevo.php");
+                        header("location:index.php");
                     }
 
                     }catch(Exception $e){

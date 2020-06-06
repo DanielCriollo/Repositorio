@@ -98,8 +98,10 @@
                                         <label for="name" class="control-label">Nacionalidad (*)</label>
                                         <select class="form-control" data-toggle="select2" name="pais">
                                             <option>Select</option>
-                                            <optgroup label="Alaskan/Hawaiian Time Zone">
-                                                <option value="1">Colombia</option>                                                    
+                                            <optgroup label="Nacionalidad">
+                                                <?php foreach($matrizPaises as $pais):?>                                            
+                                                    <option value="<?php echo $pais['id']; ?>"><?php echo $pais['nombre']; ?></option>
+                                                <?php endforeach;?>                                                     
                                             </optgroup>
                                         </select>
                                     </div>
@@ -107,8 +109,10 @@
                                         <label for="name" class="control-label">Departamento (*)</label>
                                         <select class="form-control" data-toggle="select2" name="departamento">
                                             <option>Select</option>
-                                            <optgroup label="Alaskan/Hawaiian Time Zone">
-                                                <option value="1">Nariño</option>                                                    
+                                            <optgroup label="Departamento">
+                                                <?php foreach($matrizdepartamentoss as $departamentoss):?>                                            
+                                                    <option value="<?php echo $departamentoss['id']; ?>"><?php echo $departamentoss['nombre']; ?></option>
+                                                <?php endforeach;?>                                                    
                                             </optgroup>
                                         </select>
                                     </div>
@@ -116,10 +120,10 @@
                                         <label for="name" class="control-label">Municipio (*)</label>
                                         <select class="form-control" data-toggle="select2" name="municipio">
                                             <option>Select</option>
-                                            <optgroup label="Alaskan/Hawaiian Time Zone">
-                                                
-                                                    <option value="1">Pasto</option> 
-                                                                                   
+                                            <optgroup label="Municipio">
+                                                <?php foreach($matrizMunicipios as $municipio):?>
+                                                    <option value="<?php echo $municipio['id']; ?>"><?php echo $municipio['nombre']; ?></option> 
+                                                <?php endforeach;?>                                      
                                             </optgroup>
                                         </select>
                                     </div>
@@ -142,10 +146,10 @@
                                         <label for="name" class="control-label">Tipo de Documento (*)</label>
                                         <select class="form-control" data-toggle="select2" name="tip_documento">
                                             <option>Select</option>                                                
-                                            <optgroup label="Alaskan/Hawaiian Time Zone">
-                                                   
-                                                    <option value="CC">Cedula de Ciudadania</option>
-                                               
+                                            <optgroup label="Tipo de Documento">
+                                                <?php foreach($matrizTipoDocumentos as $tipoDocumento):?>   
+                                                    <option value="<?php echo $tipoDocumento['id']; ?>"><?php echo $tipoDocumento['nombre']; ?></option>
+                                                <?php endforeach;?> 
                                             </optgroup>
                                         </select>
                                     </div>
@@ -169,8 +173,10 @@
                                         <label for="name" class="control-label">Lugar de Expedicion (*)</label>
                                         <select class="form-control" data-toggle="select2" name="lu_expedicion">
                                             <option>Select</option>
-                                            <optgroup label="Alaskan/Hawaiian Time Zone">
-                                                <option value="1">Nariño</option>                                                    
+                                            <optgroup label="Lugar de Expedicion">
+                                                <?php foreach($matrizdepartamentoss as $departamentoss):?>                                            
+                                                    <option value="<?php echo $departamentoss['id']; ?>"><?php echo $departamentoss['nombre']; ?></option>
+                                                <?php endforeach;?>                                                    
                                             </optgroup>
                                         </select>
                                     </div>
@@ -181,8 +187,10 @@
                                         <label for="name" class="control-label">Sexo (*)</label>
                                         <select class="form-control" data-toggle="select2" name="sexo">
                                             <option>Select</option>
-                                            <optgroup label="Alaskan/Hawaiian Time Zone">                                                
-                                                    <option value="MA">Masculino</option>                                                                                             
+                                            <optgroup label="Sexo">                                                
+                                                <?php foreach($matrizTipoSexos as $sexo):?>                                            
+                                                    <option value="<?php echo $sexo['codigo']; ?>"><?php echo $sexo['nombre']; ?></option>
+                                                <?php endforeach;?>                                                                                             
                                             </optgroup>
                                         </select>
                                     </div>
@@ -190,8 +198,10 @@
                                         <label for="name" class="control-label">Estado Civil</label>
                                         <select class="form-control" data-toggle="select2" name="estado_civil">
                                             <option>Select</option>
-                                            <optgroup label="Alaskan/Hawaiian Time Zone">                                                 
-                                                    <option value="1">Soltero/a</option>                                                                                           
+                                            <optgroup label="Estado Civil">                                                 
+                                                <?php foreach($matrizEstadosCiviles as $estadoCivil):?>                                            
+                                                    <option value="<?php echo $estadoCivil['id']; ?>"><?php echo $estadoCivil['nombre']; ?></option>
+                                                <?php endforeach;?>                                                                                            
                                             </optgroup>
                                         </select>
                                     </div>
@@ -215,22 +225,10 @@
                                             <input type="text" class="required form-control" id="name" name="correo_institu">
                                         </div>
                                         <div class="form-group col-md-6">
-                                            <label for="name" class="control-label">Confirmar Correo Electronico Institucional (*)</label>
-                                            <input type="text" class="required form-control" id="name" name="veri_correo_institu">
-                                        </div>
-                                    </div>
-
-                                    <div class="form-row">
-                                        <div class="form-group col-md-6">
                                             <label for="name" class="control-label">Correo Electronico (*)</label>
                                             <input type="text" class="required form-control" id="name" name="correo_personal">
-                                        </div>
-                                        <div class="form-group col-md-6">
-                                            <label for="name" class="control-label">Confirmar Correo Electronico (*)</label>
-                                            <input type="text" class="required form-control" id="name" name="veri_correo_personal">
-                                        </div>
+                                        </div>                                        
                                     </div>
-
                             </section>
                         </div>
                     </div>
@@ -247,8 +245,10 @@
                                     <label for="name" class="control-label">Tipo de Investigador (*)</label>
                                     <select class="form-control" data-toggle="select2" name="tip_investiga">
                                         <option>Select</option>
-                                        <optgroup label="Alaskan/Hawaiian Time Zone">
-                                            <option value="1">Investiga</option>                                            
+                                        <optgroup label="Tipo Investigador">
+                                            <?php foreach($matrizTipoInvestigadores as $TipoInvestigador):?>                                            
+                                                <option value="<?php echo $TipoInvestigador['id']; ?>"><?php echo $TipoInvestigador['nombre']; ?></option>
+                                            <?php endforeach;?>                                             
                                         </optgroup>
                                     </select>                                            
                                 </div>
