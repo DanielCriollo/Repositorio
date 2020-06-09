@@ -14,7 +14,8 @@
         private $alcancesTematicos;
         private $tipos_poblaciones;
         private $gruposInvestigciones;
-        private $InvestigadoresPrincipales;       
+        private $InvestigadoresPrincipales;
+        private $LineasInvestigacion;       
 
         public function __construct(){
             require_once("../modelo/Conectar.php");
@@ -131,6 +132,14 @@
                 $this->InvestigadoresPrincipales[]=$filas_catorce;
             }
             return $this->InvestigadoresPrincipales;
+        }
+
+        public function get_LineaInvestigacion(){
+            $consulta_quince=$this->db->query("SELECT * FROM linea_investigacion");
+            while($filas_quince=$consulta_quince->fetch(PDO::FETCH_ASSOC)){
+                $this->LineasInvestigacion[]=$filas_quince;
+            }
+            return $this->LineasInvestigacion;
         }
        
 

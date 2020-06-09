@@ -189,7 +189,9 @@
                                                     <select class="form-control" data-toggle="select2" name="departamento">
                                                         <option>Select</option>
                                                         <optgroup label="Grupo de Investigacion">
-                                                            <option value="1">Nariño</option>                                                    
+                                                            <?php foreach($matrizgruposInvestigciones as $grupoInvestigacion):?>
+                                                                <option value="<?php echo $grupoInvestigacion['id']; ?>"><?php echo $grupoInvestigacion['nombre']; ?></option>
+                                                            <?php endforeach;?>                                                    
                                                         </optgroup>
                                                     </select>
                                                 </div>
@@ -704,8 +706,27 @@
                                 </div>                                                                      
                             </div>
                             <div class="tab-pane" id="linea">
-                                <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. Nulla consequat massa quis enim.</p>
-                                <p class="mb-0">Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>
+                                <div class="col-xl-12">                               
+                                    <div class="form-row">
+                                        <div class="form-group col-md-4">
+                                            <label for="name" class="control-label">Areas de investigacion</label>
+                                            <select class="form-control" data-toggle="select2" name="pais">
+                                                <option>Select</option>
+                                                <optgroup label="Programas">
+                                                    <?php foreach($matrizLineasInvestigaciones as $LineaInvestigacion):?>
+                                                        <option value="<?php echo $LineaInvestigacion['id']; ?>"><?php echo $LineaInvestigacion['nombre']; ?></option>
+                                                    <?php endforeach;?>                                                    
+                                                </optgroup>
+                                            </select>
+                                        </div>
+                                        <div class="form-group col-md-4 d-flex justify-content-end">
+                                            <button type="button" class="btn btn-primary waves-effect waves-light btn-lg">Elija sus areas de investigacion</button>
+                                        </div>
+                                        <div class="form-group col-md-4 d-flex justify-content-center">                                    
+                                            <p class="text-muted mb-0">Quieres agregar una nueva Linea de investigacion? <a href="../controlador/LineaInvestigacion_controlador.php" class="text-dark m-l-5"><b>Crear</b></a></p>                                   
+                                        </div>                    
+                                    </div> 
+                                </div>                                                     
                             </div>
                             <div class="tab-pane" id="kid">
                                 <p>Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu. In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt.Cras dapibus. Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.</p>

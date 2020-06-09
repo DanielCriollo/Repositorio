@@ -16,6 +16,7 @@
     $matrizTiposPoblaciones=$inicio->get_tipoPoblacion();
     $matrizgruposInvestigciones=$inicio->get_grupoInvestigacion();
     $matrizInvestigadoresPrincipales=$inicio->get_InvestigadorPrincipal();
+    $matrizLineasInvestigaciones=$inicio->get_LineaInvestigacion();
 
     require_once("../vista/Inicio_nuevo.php");
 
