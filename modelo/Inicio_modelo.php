@@ -1,6 +1,7 @@
 <?php
     class Inicio_modelo{
         private $db;
+        private $registros;
         private $universidades;
         private $departamentos;
         private $grandesareasconocimientos;
@@ -141,7 +142,21 @@
             }
             return $this->LineasInvestigacion;
         }
-       
+        
+        public function get_registro(){
+            session_start();
+            if(!isset($_SESSION["documento"])){
+                header("location:Login_nuevo.php");
+            }
+            $iduser= $_SESSION["documento"];
+            $consultadiesiseis=$this->db->query("SELECT * FROM director, pais, departamento, municipio, tipo_documento, estado_civil, tipo_investigador WHERE numero_de_documento='$iduser'");
+
+            while($filas_diesiseis=$consultadiesiseis->fetch(PDO::FETCH_ASSOC)){
+                $this->registros[]=$filas_diesiseis;
+            }
+            return $this->registros;
+        }
+
 
     }
 ?>

@@ -1,5 +1,8 @@
 <?php    
-
+    session_start();
+    if(isset($_SESSION["documento"])){
+        header("location:controlador/Inicio_controlador.php");
+    }
 
     if(isset($_POST["pr"])){           
                 try{
@@ -19,7 +22,7 @@
                     if($numero_registro!=0){
                         //echo "<h2>Adelante</h2>";
                         session_start();
-                        $_SESSION["usuario"]=$_POST["nombre"];
+                        $_SESSION["documento"]=$_POST["documen"];
                         header("location:controlador/Inicio_controlador.php");
 
                     }else{

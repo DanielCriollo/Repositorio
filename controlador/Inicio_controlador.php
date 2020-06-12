@@ -17,6 +17,7 @@
     $matrizgruposInvestigciones=$inicio->get_grupoInvestigacion();
     $matrizInvestigadoresPrincipales=$inicio->get_InvestigadorPrincipal();
     $matrizLineasInvestigaciones=$inicio->get_LineaInvestigacion();
+    $matrisRegistros=$inicio->get_registro();
 
     require_once("../vista/Inicio_nuevo.php");
 

@@ -24,7 +24,6 @@
 
     <?php
         require("../modelo/insertar.php");
-
         
     ?>
     <div id="wrapper">
@@ -129,7 +128,7 @@
                                                                     <optgroup label="Nacionalidad">
                                                                         <?php foreach($matrizPaises as $pais):?>
                                                                         <option value="<?php echo $pais['id']; ?>">
-                                                                            <?php echo $pais['nombre']; ?></option>
+                                                                            <?php echo $pais['nombre_pais']; ?></option>
                                                                         <?php endforeach;?>
                                                                     </optgroup>
                                                                 </select>
@@ -144,7 +143,7 @@
                                                                         <?php foreach($matrizdepartamentoss as $departamentoss):?>
                                                                         <option
                                                                             value="<?php echo $departamentoss['id']; ?>">
-                                                                            <?php echo $departamentoss['nombre']; ?>
+                                                                            <?php echo $departamentoss['nombre_departamento']; ?>
                                                                         </option>
                                                                         <?php endforeach;?>
                                                                     </optgroup>
@@ -159,7 +158,7 @@
                                                                     <optgroup label="Municipio">
                                                                         <?php foreach($matrizMunicipios as $municipio):?>
                                                                         <option value="<?php echo $municipio['id']; ?>">
-                                                                            <?php echo $municipio['nombre']; ?></option>
+                                                                            <?php echo $municipio['nombre_municipio']; ?></option>
                                                                         <?php endforeach;?>
                                                                     </optgroup>
                                                                 </select>
@@ -193,7 +192,7 @@
                                                                         <?php foreach($matrizTipoDocumentos as $tipoDocumento):?>
                                                                         <option
                                                                             value="<?php echo $tipoDocumento['id']; ?>">
-                                                                            <?php echo $tipoDocumento['nombre']; ?>
+                                                                            <?php echo $tipoDocumento['nombre_documento']; ?>
                                                                         </option>
                                                                         <?php endforeach;?>
                                                                     </optgroup>
@@ -230,10 +229,10 @@
                                                                     name="lu_expedicion">
                                                                     <option>--Seleccione--</option>
                                                                     <optgroup label="Lugar de Expedicion">
-                                                                        <?php foreach($matrizdepartamentoss as $departamentoss):?>
+                                                                        <?php foreach($matrizMunicipios as $municipios):?>
                                                                         <option
-                                                                            value="<?php echo $departamentoss['id']; ?>">
-                                                                            <?php echo $departamentoss['nombre']; ?>
+                                                                            value="<?php echo $municipios['id']; ?>">
+                                                                            <?php echo $municipios['nombre_municipio']; ?>
                                                                         </option>
                                                                         <?php endforeach;?>
                                                                     </optgroup>
@@ -250,7 +249,7 @@
                                                                     <optgroup label="Sexo">
                                                                         <?php foreach($matrizTipoSexos as $sexo):?>
                                                                         <option value="<?php echo $sexo['codigo']; ?>">
-                                                                            <?php echo $sexo['nombre']; ?></option>
+                                                                            <?php echo $sexo['nombre_sexo']; ?></option>
                                                                         <?php endforeach;?>
                                                                     </optgroup>
                                                                 </select>
@@ -265,7 +264,7 @@
                                                                         <?php foreach($matrizEstadosCiviles as $estadoCivil):?>
                                                                         <option
                                                                             value="<?php echo $estadoCivil['id']; ?>">
-                                                                            <?php echo $estadoCivil['nombre']; ?>
+                                                                            <?php echo $estadoCivil['nombre_civil']; ?>
                                                                         </option>
                                                                         <?php endforeach;?>
                                                                     </optgroup>
@@ -282,7 +281,7 @@
                                                             <div class="form-group col-md-6">
                                                                 <label for="name" class="control-label">Numero de
                                                                     Contacto (*)</label>
-                                                                <input type="text" class="required form-control"
+                                                                <input type="number" class="required form-control"
                                                                     id="name" name="num_contacto">
                                                             </div>
                                                         </div>
@@ -327,7 +326,7 @@
                                                                         <?php foreach($matrizTipoInvestigadores as $TipoInvestigador):?>
                                                                         <option
                                                                             value="<?php echo $TipoInvestigador['id']; ?>">
-                                                                            <?php echo $TipoInvestigador['nombre']; ?>
+                                                                            <?php echo $TipoInvestigador['nombre_investigador']; ?>
                                                                         </option>
                                                                         <?php endforeach;?>
                                                                     </optgroup>
