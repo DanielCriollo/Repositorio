@@ -99,20 +99,21 @@
                                                     <div class="card card-block justify-content-center">
                                                         <div class="card-body">
                                                             <h5 class="card-title">Bienvenido Director</h5>
-                                                            <img src="../assets/images/persona.png" width="100" height="100">
-                                                        </div>                                                       
-                                                            <div class="card-body">
-                                                                <h3>                                                                    
-                                                                    <?php foreach($matrisRegistros as $matrizRegistro):?>
-                                                                        <?php echo $matrizRegistro['primer_nombre']; ?>
-                                                                        <?php echo $matrizRegistro['segundo_nombre']; ?>
-                                                                        <?php echo $matrizRegistro['primer_apellido']; ?>
-                                                                        <?php echo $matrizRegistro['segundo_apellido']; ?>
-                                                                    <?php endforeach;?>
-                                                                </h3>
-                                                                <p><a href="../modelo/cierre.php">Cierra sesion</a></p>
-                                                            </div>
-                                                    </div>                                                
+                                                            <img src="../assets/images/persona.png" width="100"
+                                                                height="100">
+                                                        </div>
+                                                        <div class="card-body">
+                                                            <h3>
+                                                                <?php foreach($matrisRegistros as $matrizRegistro):?>
+                                                                <?php echo $matrizRegistro['primer_nombre']; ?>
+                                                                <?php echo $matrizRegistro['segundo_nombre']; ?>
+                                                                <?php echo $matrizRegistro['primer_apellido']; ?>
+                                                                <?php echo $matrizRegistro['segundo_apellido']; ?>
+                                                                <?php endforeach;?>
+                                                            </h3>
+                                                            <p><a href="../modelo/cierre.php">Cierra sesion</a></p>
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                         </div>
@@ -1025,138 +1026,185 @@
                                             </div>
                                         </div>
                                         <div class="tab-pane" id="cuenta">
-                                        <div class="col-xl-12">                                                
-                                            <div class="form-row">
-                                                <div class="form-group col-md-3">
-                                                    <label for="name" class="control-label">Primer Nombre</label>
+                                            <div class="col-xl-12">
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-3">
+                                                        <label for="name" class="control-label">Primer Nombre</label>
                                                         <?php foreach($matrisRegistros as $matrizRegistro):?>
-                                                        <input type="text" class="form-control " id="name" name="nom_uno" disabled="" value="<?php echo $matrizRegistro['primer_nombre']; ?>">
+                                                        <input type="text" class="form-control " disabled=""
+                                                            value="<?php echo $matrizRegistro['primer_nombre']; ?>">
                                                         <?php endforeach;?>
-                                                </div>
-                                                <div class="form-group col-md-3">
-                                                    <label for="name" class="control-label">Segundo Nombre</label>
-                                                    <?php foreach($matrisRegistros as $matrizRegistro):?>
-                                                        <input type="text" class="form-control " id="name" name="nom_dos" disabled="" value="<?php echo $matrizRegistro['segundo_nombre'];?>">
-                                                    <?php endforeach;?>
-                                                </div>
-                                                <div class="form-group col-md-3">
-                                                    <label for="name" class="control-label">Primer Apellido</label>
-                                                    <?php foreach($matrisRegistros as $matrizRegistro):?>
-                                                        <input type="text" class="form-control " id="name" name="nom_dos" disabled="" value="<?php echo $matrizRegistro['primer_apellido'];?>">
-                                                    <?php endforeach;?>
-                                                </div>
-                                                <div class="form-group col-md-3">
-                                                    <label for="name" class="control-label">Segundo Apellido</label>
-                                                    <?php foreach($matrisRegistros as $matrizRegistro):?>
-                                                        <input type="text" class="form-control " id="name" name="nom_dos" disabled="" value="<?php echo $matrizRegistro['segundo_apellido'];?>">
-                                                    <?php endforeach;?>
-                                                </div>                                                
-                                            </div> 
-                                            
-                                            <div class="form-row">
-                                                <div class="form-group col-md-3">
-                                                    <label for="name" class="control-label">Nacionalidad</label>
+                                                    </div>
+                                                    <div class="form-group col-md-3">
+                                                        <label for="name" class="control-label">Segundo Nombre</label>
                                                         <?php foreach($matrisRegistros as $matrizRegistro):?>
-                                                        <input type="text" class="form-control " id="name" name="nom_uno" disabled="" value="<?php echo $matrizRegistro['nombre_pais']; ?>">
+                                                        <input type="text" class="form-control " id="name"
+                                                            name="nom_dos" disabled=""
+                                                            value="<?php echo $matrizRegistro['segundo_nombre'];?>">
                                                         <?php endforeach;?>
-                                                </div>
-                                                <div class="form-group col-md-3">
-                                                    <label for="name" class="control-label">Departamento</label>
-                                                    <?php foreach($matrisRegistros as $matrizRegistro):?>
-                                                        <input type="text" class="form-control " id="name" name="nom_dos" disabled="" value="<?php echo $matrizRegistro['nombre_departamento'];?>">
-                                                    <?php endforeach;?>
-                                                </div>
-                                                <div class="form-group col-md-3">
-                                                    <label for="name" class="control-label">Municipio</label>
-                                                    <?php foreach($matrisRegistros as $matrizRegistro):?>
-                                                        <input type="text" class="form-control " id="name" name="nom_dos" disabled="" value="<?php echo $matrizRegistro['nombre_municipio'];?>">
-                                                    <?php endforeach;?>
-                                                </div>
-                                                <div class="form-group col-md-3">
-                                                    <label for="name" class="control-label">Fecha de Nacimiento</label>
-                                                    <?php foreach($matrisRegistros as $matrizRegistro):?>
-                                                        <input type="text" class="form-control " id="name" name="nom_dos" disabled="" value="<?php echo $matrizRegistro['fecha_nacimiento'];?>">
-                                                    <?php endforeach;?>
-                                                </div>                                                
-                                            </div>
-                                            
-                                            <div class="form-row">
-                                                <div class="form-group col-md-3">
-                                                    <label for="name" class="control-label">Tipo de documento</label>
+                                                    </div>
+                                                    <div class="form-group col-md-3">
+                                                        <label for="name" class="control-label">Primer Apellido</label>
                                                         <?php foreach($matrisRegistros as $matrizRegistro):?>
-                                                        <input type="text" class="form-control " id="name" name="nom_uno" disabled="" value="<?php echo $matrizRegistro['nombre_documento']; ?>">
+                                                        <input type="text" class="form-control " id="name"
+                                                            name="nom_dos" disabled=""
+                                                            value="<?php echo $matrizRegistro['primer_apellido'];?>">
                                                         <?php endforeach;?>
-                                                </div>
-                                                <div class="form-group col-md-3">
-                                                    <label for="name" class="control-label">Numero de identificacion</label>
-                                                    <?php foreach($matrisRegistros as $matrizRegistro):?>
-                                                        <input type="text" class="form-control " id="name" name="nom_dos" disabled="" value="<?php echo $matrizRegistro['numero_de_documento'];?>">
-                                                    <?php endforeach;?>
-                                                </div>
-                                                <div class="form-group col-md-3">
-                                                    <label for="name" class="control-label">Fecha de expedicion</label>
-                                                    <?php foreach($matrisRegistros as $matrizRegistro):?>
-                                                        <input type="text" class="form-control " id="name" name="nom_dos" disabled="" value="<?php echo $matrizRegistro['fecha_expedicion_documento'];?>">
-                                                    <?php endforeach;?>
-                                                </div>
-                                                <div class="form-group col-md-3">
-                                                    <label for="name" class="control-label">Lugar de expedicion</label>
-                                                    <?php foreach($matrisRegistros as $matrizRegistro):?>
-                                                        <input type="text" class="form-control " id="name" name="nom_dos" disabled="" value="<?php echo $matrizRegistro['nombre_municipio']; echo " - "; echo $matrizRegistro['nombre_departamento'];?>">
-                                                    <?php endforeach;?>
-                                                </div>                                                
-                                            </div>
-                                            
-                                            <div class="form-row">
-                                                <div class="form-group col-md-3">
-                                                    <label for="name" class="control-label">Sexo</label>
+                                                    </div>
+                                                    <div class="form-group col-md-3">
+                                                        <label for="name" class="control-label">Segundo Apellido</label>
                                                         <?php foreach($matrisRegistros as $matrizRegistro):?>
-                                                        <input type="text" class="form-control " id="name" name="nom_uno" disabled="" value="<?php echo $matrizRegistro['sexo_codigo']; ?>">
+                                                        <input type="text" class="form-control " id="name"
+                                                            name="nom_dos" disabled=""
+                                                            value="<?php echo $matrizRegistro['segundo_apellido'];?>">
                                                         <?php endforeach;?>
+                                                    </div>
                                                 </div>
-                                                <div class="form-group col-md-3">
-                                                    <label for="name" class="control-label">Estado civil</label>
-                                                    <?php foreach($matrisRegistros as $matrizRegistro):?>
-                                                        <input type="text" class="form-control " id="name" name="nom_dos" disabled="" value="<?php echo $matrizRegistro['nombre_civil'];?>">
-                                                    <?php endforeach;?>
-                                                </div>
-                                                <div class="form-group col-md-3">
-                                                    <label for="name" class="control-label">Numero de contacto</label>
-                                                    <?php foreach($matrisRegistros as $matrizRegistro):?>
-                                                        <input type="text" class="form-control " id="name" name="nom_dos" disabled="" value="<?php echo $matrizRegistro['telefono'];?>">
-                                                    <?php endforeach;?>
-                                                </div>
-                                                <div class="form-group col-md-3">
-                                                    <label for="name" class="control-label">Correo Electronico Institucional</label>
-                                                    <?php foreach($matrisRegistros as $matrizRegistro):?>
-                                                        <input type="text" class="form-control " id="name" name="nom_dos" disabled="" value="<?php echo $matrizRegistro['correo_institucional'];?>">
-                                                    <?php endforeach;?>
-                                                </div>                                                
-                                            </div>
 
-                                            <div class="form-row">
-                                                <div class="form-group col-md-3">
-                                                    <label for="name" class="control-label">Correo Electronico Personal</label>
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-3">
+                                                        <label for="name" class="control-label">Nacionalidad</label>
                                                         <?php foreach($matrisRegistros as $matrizRegistro):?>
-                                                        <input type="text" class="form-control " id="name" name="nom_uno" disabled="" value="<?php echo $matrizRegistro['correo_personal']; ?>">
+                                                        <input type="text" class="form-control " id="name"
+                                                            name="nom_uno" disabled=""
+                                                            value="<?php echo $matrizRegistro['nombre_pais']; ?>">
                                                         <?php endforeach;?>
+                                                    </div>
+                                                    <div class="form-group col-md-3">
+                                                        <label for="name" class="control-label">Departamento</label>
+                                                        <?php foreach($matrisRegistros as $matrizRegistro):?>
+                                                        <input type="text" class="form-control " id="name"
+                                                            name="nom_dos" disabled=""
+                                                            value="<?php echo $matrizRegistro['nombre_departamento'];?>">
+                                                        <?php endforeach;?>
+                                                    </div>
+                                                    <div class="form-group col-md-3">
+                                                        <label for="name" class="control-label">Municipio</label>
+                                                        <?php foreach($matrisRegistros as $matrizRegistro):?>
+                                                        <input type="text" class="form-control " id="name"
+                                                            name="nom_dos" disabled=""
+                                                            value="<?php echo $matrizRegistro['nombre_municipio'];?>">
+                                                        <?php endforeach;?>
+                                                    </div>
+                                                    <div class="form-group col-md-3">
+                                                        <label for="name" class="control-label">Fecha de
+                                                            Nacimiento</label>
+                                                        <?php foreach($matrisRegistros as $matrizRegistro):?>
+                                                        <input type="text" class="form-control " id="name"
+                                                            name="nom_dos" disabled=""
+                                                            value="<?php echo $matrizRegistro['fecha_nacimiento'];?>">
+                                                        <?php endforeach;?>
+                                                    </div>
                                                 </div>
-                                                <div class="form-group col-md-3">
-                                                    <label for="name" class="control-label">Nombre en Citas Bibliograficas</label>
-                                                    <?php foreach($matrisRegistros as $matrizRegistro):?>
-                                                        <input type="text" class="form-control " id="name" name="nom_dos" disabled="" value="<?php echo $matrizRegistro['nombre_bibliografico'];?>">
-                                                    <?php endforeach;?>
-                                                </div>
-                                                <div class="form-group col-md-3">
-                                                    <label for="name" class="control-label">Tipo de Investigador</label>
-                                                    <?php foreach($matrisRegistros as $matrizRegistro):?>
-                                                        <input type="text" class="form-control " id="name" name="" disabled="" value="<?php echo $matrizRegistro['nombre_investigador'];?>">
-                                                    <?php endforeach;?>
-                                                </div>                                                
-                                            </div>
 
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-3">
+                                                        <label for="name" class="control-label">Tipo de
+                                                            documento</label>
+                                                        <?php foreach($matrisRegistros as $matrizRegistro):?>
+                                                        <input type="text" class="form-control " id="name"
+                                                            name="nom_uno" disabled=""
+                                                            value="<?php echo $matrizRegistro['nombre_documento']; ?>">
+                                                        <?php endforeach;?>
+                                                    </div>
+                                                    <div class="form-group col-md-3">
+                                                        <label for="name" class="control-label">Numero de
+                                                            identificacion</label>
+                                                        <?php foreach($matrisRegistros as $matrizRegistro):?>
+                                                        <input type="text" class="form-control " id="name"
+                                                            name="nom_dos" disabled=""
+                                                            value="<?php echo $matrizRegistro['numero_de_documento'];?>">
+                                                        <?php endforeach;?>
+                                                    </div>
+                                                    <div class="form-group col-md-3">
+                                                        <label for="name" class="control-label">Fecha de
+                                                            expedicion</label>
+                                                        <?php foreach($matrisRegistros as $matrizRegistro):?>
+                                                        <input type="text" class="form-control " id="name"
+                                                            name="nom_dos" disabled=""
+                                                            value="<?php echo $matrizRegistro['fecha_expedicion_documento'];?>">
+                                                        <?php endforeach;?>
+                                                    </div>
+                                                    <div class="form-group col-md-3">
+                                                        <label for="name" class="control-label">Lugar de
+                                                            expedicion</label>
+                                                        <?php foreach($matrisRegistros as $matrizRegistro):?>
+                                                        <input type="text" class="form-control " id="name"
+                                                            name="nom_dos" disabled=""
+                                                            value="<?php echo $matrizRegistro['nombre_municipio']; echo " - "; echo $matrizRegistro['nombre_departamento'];?>">
+                                                        <?php endforeach;?>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-3">
+                                                        <label for="name" class="control-label">Sexo</label>
+                                                        <?php foreach($matrisRegistros as $matrizRegistro):?>
+                                                        <input type="text" class="form-control " id="name"
+                                                            name="nom_uno" disabled=""
+                                                            value="<?php echo $matrizRegistro['nombre_sexo']; ?>">
+                                                        <?php endforeach;?>
+                                                    </div>
+                                                    <div class="form-group col-md-3">
+                                                        <label for="name" class="control-label">Estado civil</label>
+                                                        <?php foreach($matrisRegistros as $matrizRegistro):?>
+                                                        <input type="text" class="form-control " id="name"
+                                                            name="nom_dos" disabled=""
+                                                            value="<?php echo $matrizRegistro['nombre_civil'];?>">
+                                                        <?php endforeach;?>
+                                                    </div>
+                                                    <div class="form-group col-md-3">
+                                                        <label for="name" class="control-label">Numero de
+                                                            contacto</label>
+                                                        <?php foreach($matrisRegistros as $matrizRegistro):?>
+                                                        <input type="text" class="form-control " id="name"
+                                                            name="nom_dos" disabled=""
+                                                            value="<?php echo $matrizRegistro['telefono'];?>">
+                                                        <?php endforeach;?>
+                                                    </div>
+                                                    <div class="form-group col-md-3">
+                                                        <label for="name" class="control-label">Correo Electronico
+                                                            Institucional</label>
+                                                        <?php foreach($matrisRegistros as $matrizRegistro):?>
+                                                        <input type="text" class="form-control " id="name"
+                                                            name="nom_dos" disabled=""
+                                                            value="<?php echo $matrizRegistro['correo_institucional'];?>">
+                                                        <?php endforeach;?>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-3">
+                                                        <label for="name" class="control-label">Correo Electronico
+                                                            Personal</label>
+                                                        <?php foreach($matrisRegistros as $matrizRegistro):?>
+                                                        <input type="text" class="form-control " id="name"
+                                                            name="nom_uno" disabled=""
+                                                            value="<?php echo $matrizRegistro['correo_personal']; ?>">
+                                                        <?php endforeach;?>
+                                                    </div>
+                                                    <div class="form-group col-md-3">
+                                                        <label for="name" class="control-label">Nombre en Citas
+                                                            Bibliograficas</label>
+                                                        <?php foreach($matrisRegistros as $matrizRegistro):?>
+                                                        <input type="text" class="form-control " id="name"
+                                                            name="nom_dos" disabled=""
+                                                            value="<?php echo $matrizRegistro['nombre_bibliografico'];?>">
+                                                        <?php endforeach;?>
+                                                    </div>
+                                                    <div class="form-group col-md-3">
+                                                        <label for="name" class="control-label">Tipo de
+                                                            Investigador</label>
+                                                        <?php foreach($matrisRegistros as $matrizRegistro):?>
+                                                        <input type="text" class="form-control " id="name" name=""
+                                                            disabled=""
+                                                            value="<?php echo $matrizRegistro['nombre_investigador'];?>">
+                                                        <?php endforeach;?>
+                                                    </div>
+                                                </div>
+
+                                            </div>
                                         </div>
-                                    </div>
                                 </form>
                             </div>
                         </div>

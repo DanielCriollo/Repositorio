@@ -149,7 +149,19 @@
                 header("location:Login_nuevo.php");
             }
             $iduser= $_SESSION["documento"];
-            $consultadiesiseis=$this->db->query("SELECT * FROM director, pais, departamento, municipio, tipo_documento, estado_civil, tipo_investigador WHERE numero_de_documento='$iduser'");
+            $consultadiesiseis=$this->db->query("SELECT d.primer_nombre, d.segundo_nombre,d.primer_apellido,d.segundo_apellido,d.fecha_nacimiento,
+            d.numero_de_documento,d.fecha_expedicion_documento,d.id_municipio_de_expedicion_documento,  se.nombre_sexo,
+            es.nombre_civil,d.telefono,d.correo_institucional,d.correo_personal,d.nombre_bibliografico,
+            td.nombre_documento , mu.nombre_municipio ,dp.nombre_departamento,pa.nombre_pais,ti.nombre_investigador
+            FROM director as d 
+            INNER JOIN sexo as se on sexo_codigo=se.codigo
+            inner join tipo_documento as td on tipo_documento_id=td.id 
+            inner join municipio as mu on municipio_id=mu.id 
+            inner join departamento as dp on departamento_id=dp.id 
+            inner join pais as pa on pais_id=pa.id
+            inner join tipo_investigador  as ti on tipo_investigador_id=ti.id
+            inner join estado_civil as es on estado_civil_id=es.id
+            where numero_de_documento='$iduser'");
 
             while($filas_diesiseis=$consultadiesiseis->fetch(PDO::FETCH_ASSOC)){
                 $this->registros[]=$filas_diesiseis;
