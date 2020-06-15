@@ -44,21 +44,16 @@
                                     <h4 class="text-white text-center mb-0 mt-0">Bienvenido</h4>
                                 </div>
                                 <div class="card-body">
-                                    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" class="p-2">
+                                    <form action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post" class="p-2">              
 
-                                        <div class="form-group mb-3">
-                                            <label for="name" class="control-label">Primer Nombre</label>
-                                            <input type="text" class="required form-control" id="documen" name="nombre">
-                                        </div>
-
-                                        <div class="form-group mb-3">
+                                        <div class="form-group mb-4">
 
                                             <label for="name" class="control-label">Cedula de Ciudadania</label>
                                             <input type="number" class="required form-control" id="documen"
                                                 name="documen">
                                         </div>
 
-                                        <div class="form-group mb-3">
+                                        <div class="form-group mb-4">
 
                                             <label for="name" class="control-label">Contraseña</label>
                                             <input type="password" class="required form-control" id="contra"

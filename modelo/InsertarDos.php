@@ -36,7 +36,7 @@
         $cronoDuracion=$_POST["cronoDuracion"];
         $departamentobene=$_POST["departamento_bene"];
         $municipio_bene=$_POST["municipio_bene"];        
-        $numAfectados=$_POST["numAfectados"];        
+        $numAfectados=$_POST["numAfectados"]; 
 
         $sql_dos="INSERT INTO proyecto (nomInvestigador,telefono,url_grupLac,email,universidad_id,facultad_id,programa_id,grupoInvestigacion_Id,categoriaGrupo_id,
         GranAreaCono_id,AreaConoci_id,Departamento_id,nombre_proyecto,nombreGrupo,municipio_id,linea_estrategica_id,alcance_tematico_id,

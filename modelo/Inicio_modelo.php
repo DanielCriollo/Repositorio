@@ -2,6 +2,9 @@
     class Inicio_modelo{
         private $db;
         private $registros;
+        private $proyectos;
+        private $verproyectos;
+        private $principales;
         private $universidades;
         private $departamentos;
         private $grandesareasconocimientos;
@@ -169,6 +172,57 @@
             return $this->registros;
         }
 
+        public function get_Principal(){
+            if(!isset($_SESSION["documento"])){
+                header("location:Login_nuevo.php");
+            }
+            $idusere= $_SESSION["documento"];
+            $consulta_diecisiete=$this->db->query("SELECT * FROM investigador_principal WHERE num_cedula='$idusere'");
+            while($filas_diecisiete=$consulta_diecisiete->fetch(PDO::FETCH_ASSOC)){
+                $this->principales[]=$filas_diecisiete;
+            }
+            return $this->principales;
+        }
 
+        public function get_proyecto(){
+            if(!isset($_SESSION["documento"])){
+                header("location:Login_nuevo.php");
+            }
+            $idusere= $_SESSION["documento"];
+
+            $consultadieciocho=$this->db->query("SELECT p.numAfectados,i.id,t.nombre_Pobla,mu.nombre_municipio,dp.nombre_departamento
+            FROM proyecto as p
+            INNER JOIN investigador_principal as i on investigador_principal_id=i.id
+            inner join municipio as mu on municipioBene_id=mu.id 
+            inner join departamento as dp on departamentoBene_id=dp.id 
+            inner join tipo_poblacion as t on tipo_poblacion_id=t.id
+            where num_cedula='$idusere'");
+
+            while($filas_dieciocho=$consultadieciocho->fetch(PDO::FETCH_ASSOC)){
+                $this->proyectos[]=$filas_dieciocho;
+            }
+            return $this->proyectos;
+
+        }
+
+        public function get_proyectosRealizados(){
+            if(!isset($_SESSION["documento"])){
+                header("location:Login_nuevo.php");
+            }
+            $idusero= $_SESSION["documento"];
+
+            $consultadiecinueve=$this->db->query("SELECT p.url_grupLac,p.nombreGrupo,p.id,p.nombre_proyecto,p.numAfectados,p.nomInvestigador,
+            u.nombre_universidad,i.nombre,e.nombre_estado
+            FROM proyecto as p
+            INNER JOIN estado_proyecto as e on estado_proyecto_id=e.id
+            INNER JOIN universidad as u on universidad_id=u.id
+            INNER JOIN investigador_principal as i on investigador_principal_id=i.id
+            where num_cedula='$idusero'");
+
+            while($filas_diecinueve=$consultadiecinueve->fetch(PDO::FETCH_ASSOC)){
+                $this->verproyectos[]=$filas_diecinueve;
+            }
+            return $this->verproyectos;
+        }
     }
 ?>

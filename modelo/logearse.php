@@ -8,14 +8,12 @@
                 try{
                     require_once("Conectar.php");
                     $base_log=Conectar::conexion();
-                    $sql="SELECT * FROM director WHERE numero_de_documento=:login AND clave=:password AND primer_nombre=:nombre";
+                    $sql="SELECT * FROM director WHERE numero_de_documento=:login AND clave=:password";
                     $resultado=$base_log->prepare($sql);
                     $login=htmlentities(addslashes($_POST["documen"]));
                     $password=htmlentities(addslashes($_POST["contra"]));
-                    $nombre=htmlentities(addslashes($_POST["nombre"]));
                     $resultado->bindValue(":login" , $login);
                     $resultado->bindValue(":password",$password);
-                    $resultado->bindValue(":nombre",$nombre);
                     $resultado->execute();
                     $numero_registro=$resultado->rowCount();
 

@@ -18,6 +18,9 @@
     $matrizInvestigadoresPrincipales=$inicio->get_InvestigadorPrincipal();
     $matrizLineasInvestigaciones=$inicio->get_LineaInvestigacion();
     $matrisRegistros=$inicio->get_registro();
+    $matrizPrincipales=$inicio->get_Principal();
+    $matrizproyectos=$inicio->get_proyecto();
+    $matrizverProyectos=$inicio->get_proyectosRealizados();
 
     require_once("../vista/Inicio_nuevo.php");
 

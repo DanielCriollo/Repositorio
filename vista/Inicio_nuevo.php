@@ -141,147 +141,6 @@
                                                     <div class="tab-pane" id="realizados">
                                                         <section>
                                                             <div class="form-row">
-                                                                <div class="form-group col-md-4">
-                                                                    <label for="name" class="control-label">Nombre de la
-                                                                        Universidad</label>
-                                                                    <select class="form-control" data-toggle="select2"
-                                                                        name="pais">
-                                                                        <option>--Seleccione--</option>
-                                                                        <optgroup label="Nombre de la Universidad">
-                                                                            <?php foreach($matrizUniversidades as $universidad):?>
-                                                                            <option
-                                                                                value="<?php echo $universidad['id']; ?>">
-                                                                                <?php echo $universidad['nombre']; ?>
-                                                                            </option>
-                                                                            <?php endforeach;?>
-                                                                        </optgroup>
-                                                                    </select>
-                                                                </div>
-                                                                <div class="form-group col-md-4">
-                                                                    <label for="name"
-                                                                        class="control-label">Departamento</label>
-                                                                    <select class="form-control" data-toggle="select2"
-                                                                        name="departamento">
-                                                                        <option>--Seleccione--</option>
-                                                                        <optgroup label="Departamento">
-                                                                            <?php foreach($matrizDepartamentos as $departamento):?>
-                                                                            <option
-                                                                                value="<?php echo $departamento['id']; ?>">
-                                                                                <?php echo $departamento['nombre']; ?>
-                                                                            </option>
-                                                                            <?php endforeach;?>
-                                                                        </optgroup>
-                                                                    </select>
-                                                                </div>
-                                                                <div class="form-group col-md-4">
-                                                                    <label for="name" class="control-label">Grandes
-                                                                        Areas del
-                                                                        Conocimiento</label>
-                                                                    <select class="form-control" data-toggle="select2"
-                                                                        name="municipio">
-                                                                        <option>--Seleccione--</option>
-                                                                        <optgroup
-                                                                            label="Grandes Areas del Conocimiento">
-                                                                            <?php foreach($matrizGrandesAreasConocimientos as $granareaconocimiento):?>
-                                                                            <option
-                                                                                value="<?php echo $granareaconocimiento['id']; ?>">
-                                                                                <?php echo $granareaconocimiento['nombre']; ?>
-                                                                            </option>
-                                                                            <?php endforeach;?>
-                                                                        </optgroup>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                            <div class="form-row">
-                                                                <div class="form-group col-md-4">
-                                                                    <label for="name"
-                                                                        class="control-label">Facultad</label>
-                                                                    <select class="form-control" data-toggle="select2"
-                                                                        name="pais">
-                                                                        <option>--Seleccione--</option>
-                                                                        <optgroup label="Facultad">
-                                                                            <?php foreach($matrizFacultades as $facultad):?>
-                                                                            <option
-                                                                                value="<?php echo $facultad['id']; ?>">
-                                                                                <?php echo $facultad['nombre']; ?>
-                                                                            </option>
-                                                                            <?php endforeach;?>
-                                                                        </optgroup>
-                                                                    </select>
-                                                                </div>
-                                                                <div class="form-group col-md-4">
-                                                                    <label for="name" class="control-label">Categoria
-                                                                        del
-                                                                        Grupo</label>
-                                                                    <select class="form-control" data-toggle="select2"
-                                                                        name="departamento">
-                                                                        <option>--Seleccione--</option>
-                                                                        <optgroup label="Categoria del Grupo">
-                                                                            <?php foreach($matrizCategoriaGrupos as $CategoriaGrupo):?>
-                                                                            <option
-                                                                                value="<?php echo $CategoriaGrupo['id']; ?>">
-                                                                                <?php echo $CategoriaGrupo['nombre']; ?>
-                                                                            </option>
-                                                                            <?php endforeach;?>
-                                                                        </optgroup>
-                                                                    </select>
-                                                                </div>
-                                                                <div class="form-group col-md-4">
-                                                                    <label for="name" class="control-label">Areas del
-                                                                        conocimiento</label>
-                                                                    <select class="form-control" data-toggle="select2"
-                                                                        name="municipio">
-                                                                        <option>--Seleccione--</option>
-                                                                        <optgroup label="Areas del conocimiento">
-                                                                            <?php foreach($matrizAreasConocimientos as $areaconocimiento):?>
-                                                                            <option
-                                                                                value="<?php echo $areaconocimiento['id']; ?>">
-                                                                                <?php echo $areaconocimiento['nombre']; ?>
-                                                                            </option>
-                                                                            <?php endforeach;?>
-                                                                        </optgroup>
-                                                                    </select>
-                                                                </div>
-                                                            </div>
-                                                            <div class="form-row">
-                                                                <div class="form-group col-md-4">
-                                                                    <label for="name"
-                                                                        class="control-label">Programas</label>
-                                                                    <select class="form-control" data-toggle="select2"
-                                                                        name="pais">
-                                                                        <option>--Seleccione--</option>
-                                                                        <optgroup label="Programas">
-                                                                            <?php foreach($matrizProgramas as $programa):?>
-                                                                            <option
-                                                                                value="<?php echo $programa['id']; ?>">
-                                                                                <?php echo $programa['nombre']; ?>
-                                                                            </option>
-                                                                            <?php endforeach;?>
-                                                                        </optgroup>
-                                                                    </select>
-                                                                </div>
-                                                                <div class="form-group col-md-4">
-                                                                    <label for="name" class="control-label">Grupo de
-                                                                        Investigacion</label>
-                                                                    <select class="form-control" data-toggle="select2"
-                                                                        name="departamento">
-                                                                        <option>--Seleccione--</option>
-                                                                        <optgroup label="Grupo de Investigacion">
-                                                                            <?php foreach($matrizgruposInvestigciones as $grupoInvestigacion):?>
-                                                                            <option
-                                                                                value="<?php echo $grupoInvestigacion['id']; ?>">
-                                                                                <?php echo $grupoInvestigacion['nombre']; ?>
-                                                                            </option>
-                                                                            <?php endforeach;?>
-                                                                        </optgroup>
-                                                                    </select>
-                                                                </div>
-                                                                <div class="form-group col-md-4  ">
-                                                                    <button type="button"
-                                                                        class="btn btn-primary  ">Buscar</button>
-                                                                </div>
-                                                            </div>
-                                                            <div class="form-row">
                                                                 <div class="col-md-12">
                                                                     <div class="card">
                                                                         <div class="card-body">
@@ -289,7 +148,6 @@
                                                                                 <table class="table mb-0">
                                                                                     <thead class="thead-light">
                                                                                         <tr>
-                                                                                            <th>#</th>
                                                                                             <th>Codigo</th>
                                                                                             <th>Nombre del proyecto</th>
                                                                                             <th>Grupo</th>
@@ -298,14 +156,22 @@
                                                                                             <th>Investigador Principal
                                                                                             </th>
                                                                                             <th>Institucion</th>
-                                                                                            <th>Estado</th>
-                                                                                            <th>Detalles</th>
-                                                                                            <th>Acciones</th>
+                                                                                            <th>Estado</th>                                                                                
                                                                                         </tr>
                                                                                     </thead>
                                                                                     <tbody>
-
-
+                                                                                        <?php foreach($matrizverProyectos as $proyecta):?>
+                                                                                            <tr>                                                                                                    
+                                                                                                <td><?php echo $proyecta['id'];?></td>                                                                                                    
+                                                                                                <td><?php echo $proyecta['nombre_proyecto'];?></td>
+                                                                                                <td><?php echo $proyecta['nombreGrupo']; ?></td>
+                                                                                                <td><?php echo $proyecta['url_grupLac'];?></td>
+                                                                                                <td><?php echo $proyecta['nombre'];?></td>
+                                                                                                <td><?php echo $proyecta['nomInvestigador'];?></td>
+                                                                                                <td><?php echo $proyecta['nombre_universidad'];?></td>
+                                                                                                <td><?php echo $proyecta['nombre_estado'];?></td>                                                                                                                                        
+                                                                                            </tr>
+                                                                                        <?php endforeach;?>
                                                                                     </tbody>
                                                                                 </table>
                                                                             </div>
@@ -397,7 +263,7 @@
                                                                                         <?php foreach($matrizUniversidades as $universidad):?>
                                                                                         <option
                                                                                             value="<?php echo $universidad['id']; ?>">
-                                                                                            <?php echo $universidad['nombre']; ?>
+                                                                                            <?php echo $universidad['nombre_universidad']; ?>
                                                                                         </option>
                                                                                         <?php endforeach;?>
                                                                                     </optgroup>
@@ -414,7 +280,7 @@
                                                                                         <?php foreach($matrizFacultades as $facultad):?>
                                                                                         <option
                                                                                             value="<?php echo $facultad['id']; ?>">
-                                                                                            <?php echo $facultad['nombre']; ?>
+                                                                                            <?php echo $facultad['nombre_facultad']; ?>
                                                                                         </option>
                                                                                         <?php endforeach;?>
                                                                                     </optgroup>
@@ -433,7 +299,7 @@
                                                                                         <?php foreach($matrizProgramas as $programa):?>
                                                                                         <option
                                                                                             value="<?php echo $programa['id']; ?>">
-                                                                                            <?php echo $programa['nombre']; ?>
+                                                                                            <?php echo $programa['nombre_programa']; ?>
                                                                                         </option>
                                                                                         <?php endforeach;?>
                                                                                     </optgroup>
@@ -452,7 +318,7 @@
                                                                                         <?php foreach($matrizgruposInvestigciones as $grupoInvestigacion):?>
                                                                                         <option
                                                                                             value="<?php echo $grupoInvestigacion['id']; ?>">
-                                                                                            <?php echo $grupoInvestigacion['nombre']; ?>
+                                                                                            <?php echo $grupoInvestigacion['nombre_GrupoInves']; ?>
                                                                                         </option>
                                                                                         <?php endforeach;?>
                                                                                     </optgroup>
@@ -473,7 +339,7 @@
                                                                                         <?php foreach($matrizCategoriaGrupos as $CategoriaGrupo):?>
                                                                                         <option
                                                                                             value="<?php echo $CategoriaGrupo['id']; ?>">
-                                                                                            <?php echo $CategoriaGrupo['nombre']; ?>
+                                                                                            <?php echo $CategoriaGrupo['nombre_categoria']; ?>
                                                                                         </option>
                                                                                         <?php endforeach;?>
                                                                                     </optgroup>
@@ -492,7 +358,7 @@
                                                                                         <?php foreach($matrizGrandesAreasConocimientos as $granareaconocimiento):?>
                                                                                         <option
                                                                                             value="<?php echo $granareaconocimiento['id']; ?>">
-                                                                                            <?php echo $granareaconocimiento['nombre']; ?>
+                                                                                            <?php echo $granareaconocimiento['nombre_GranArea']; ?>
                                                                                         </option>
                                                                                         <?php endforeach;?>
                                                                                     </optgroup>
@@ -513,7 +379,7 @@
                                                                                         <?php foreach($matrizAreasConocimientos as $areaconocimiento):?>
                                                                                         <option
                                                                                             value="<?php echo $areaconocimiento['id']; ?>">
-                                                                                            <?php echo $areaconocimiento['nombre']; ?>
+                                                                                            <?php echo $areaconocimiento['nombre_AreaCono']; ?>
                                                                                         </option>
                                                                                         <?php endforeach;?>
                                                                                     </optgroup>
@@ -565,10 +431,10 @@
                                                                                     <option>--Seleccione--</option>
                                                                                     <optgroup
                                                                                         label="Investigador Principal">
-                                                                                        <?php foreach($matrizInvestigadoresPrincipales as $InvestigadorPrincipal):?>
+                                                                                        <?php foreach($matrizPrincipales as $Principal):?>
                                                                                         <option
-                                                                                            value="<?php echo $InvestigadorPrincipal['id']; ?>">
-                                                                                            <?php echo $InvestigadorPrincipal['nombre']; ?>
+                                                                                            value="<?php echo $Principal['id']; ?>">
+                                                                                            <?php echo $Principal['nombre']; ?>
                                                                                         </option>
                                                                                         <?php endforeach;?>
                                                                                     </optgroup>
@@ -611,7 +477,7 @@
                                                                                         <?php foreach($matrizlineasEstrategicas as $lineaEtrategica):?>
                                                                                         <option
                                                                                             value="<?php echo $lineaEtrategica['id']; ?>">
-                                                                                            <?php echo $lineaEtrategica['nombre']; ?>
+                                                                                            <?php echo $lineaEtrategica['nombre_estrategica']; ?>
                                                                                         </option>
                                                                                         <?php endforeach;?>
                                                                                     </optgroup>
@@ -629,7 +495,7 @@
                                                                                         <?php foreach($matrizAlcancesTematicos as $alcanceTematico):?>
                                                                                         <option
                                                                                             value="<?php echo $alcanceTematico['id']; ?>">
-                                                                                            <?php echo $alcanceTematico['nombre']; ?>
+                                                                                            <?php echo $alcanceTematico['nombre_tematico']; ?>
                                                                                         </option>
                                                                                         <?php endforeach;?>
                                                                                     </optgroup>
@@ -737,7 +603,7 @@
                                                                                         <?php foreach($matrizEstadosProyectos as $estadoProyecto):?>
                                                                                         <option
                                                                                             value="<?php echo $estadoProyecto['id']; ?>">
-                                                                                            <?php echo $estadoProyecto['nombre']; ?>
+                                                                                            <?php echo $estadoProyecto['nombre_estado']; ?>
                                                                                         </option>
                                                                                         <?php endforeach;?>
                                                                                     </optgroup>
@@ -769,18 +635,7 @@
                                                                                         Nuevo
                                                                                         Beneficiado</span>
                                                                                 </a>
-                                                                            </li>
-                                                                            <li class="nav-item">
-                                                                                <a href="#buscaBene" data-toggle="tab"
-                                                                                    aria-expanded="true"
-                                                                                    class="nav-link active">
-                                                                                    <span class="d-block d-sm-none"><i
-                                                                                            class="mdi mdi-account-outline font-18"></i></span>
-                                                                                    <span
-                                                                                        class="d-none d-sm-block">Buscar
-                                                                                        Beneficiado</span>
-                                                                                </a>
-                                                                            </li>
+                                                                            </li>                                                        
                                                                         </ul>
                                                                         <div class="tab-content">
                                                                             <div class="tab-pane" id="agregarBene">
@@ -798,7 +653,7 @@
                                                                                                 <?php foreach($matrizDepartamentos as $departamento):?>
                                                                                                 <option
                                                                                                     value="<?php echo $departamento['id']; ?>">
-                                                                                                    <?php echo $departamento['nombre']; ?>
+                                                                                                    <?php echo $departamento['nombre_departamento']; ?>
                                                                                                 </option>
                                                                                                 <?php endforeach;?>
                                                                                             </optgroup>
@@ -817,7 +672,7 @@
                                                                                                 <?php foreach($matrizMunicipios as $municipio):?>
                                                                                                 <option
                                                                                                     value="<?php echo $municipio['id']; ?>">
-                                                                                                    <?php echo $municipio['nombre']; ?>
+                                                                                                    <?php echo $municipio['nombre_municipio']; ?>
                                                                                                 </option>
                                                                                                 <?php endforeach;?>
                                                                                             </optgroup>
@@ -877,98 +732,22 @@
                                                                                                         Poblacion</th>
                                                                                                     <th>No de Afectados
                                                                                                     </th>
-                                                                                                    <th>Accion</th>
                                                                                                 </tr>
                                                                                             </thead>
                                                                                             <tbody>
-                                                                                                <tr>
-                                                                                                    <td>Mark</td>
-                                                                                                    <td>Otto</td>
-                                                                                                    <td>Mark</td>
-                                                                                                    <td>Otto</td>
-                                                                                                    <td>Mark</td>
-                                                                                                </tr>
-                                                                                                <tr>
-                                                                                                    <td>Jacob</td>
-                                                                                                    <td>Thornton</td>
-                                                                                                    <td>Jacob</td>
-                                                                                                    <td>Thornton</td>
-                                                                                                    <td>Jacob</td>
-                                                                                                </tr>
-                                                                                                <tr>
-                                                                                                    <td>Larry</td>
-                                                                                                    <td>the Bird</td>
-                                                                                                    <td>Larry</td>
-                                                                                                    <td>the Bird</td>
-                                                                                                    <td>Larry</td>
-                                                                                                </tr>
+                                                                                                <?php foreach($matrizproyectos as $proyecto):?>
+                                                                                                    <tr>                                                                                                    
+                                                                                                        <td><?php echo $proyecto['nombre_departamento'];?></td>                                                                                                    
+                                                                                                        <td><?php echo $proyecto['nombre_municipio'];?></td>
+                                                                                                        <td><?php echo $proyecto['nombre_Pobla']; ?></td>
+                                                                                                        <td><?php echo $proyecto['numAfectados'];?></td>                                                                                      
+                                                                                                    </tr>
+                                                                                                <?php endforeach;?>
                                                                                             </tbody>
                                                                                         </table>
                                                                                     </div>
                                                                                 </div>
-                                                                            </div>
-                                                                            <div class="tab-pane show active"
-                                                                                id="buscaBene">
-                                                                                <section>
-                                                                                    <div class="form-row">
-                                                                                        <div
-                                                                                            class="form-group col-md-12">
-                                                                                            <label
-                                                                                                class="control-label">Beneficiado</label>
-                                                                                            <div class="input-group">
-                                                                                                <input type="text"
-                                                                                                    class="form-control"
-                                                                                                    placeholder="Buscar los beneficiados"
-                                                                                                    aria-label="Recipient's username">
-                                                                                                <div
-                                                                                                    class="input-group-append">
-                                                                                                    <button
-                                                                                                        class="btn btn-dark waves-effect waves-light"
-                                                                                                        type="button">Buscar</button>
-                                                                                                </div>
-                                                                                            </div>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                    <div class="form-row">
-                                                                                        <div class="table-responsive">
-                                                                                            <table class="table mb-0">
-                                                                                                <thead
-                                                                                                    class="thead-dark">
-                                                                                                    <tr>
-                                                                                                        <th>#</th>
-                                                                                                        <th>Beneficiado
-                                                                                                        </th>
-                                                                                                        <th>Acciones
-                                                                                                        </th>
-                                                                                                    </tr>
-                                                                                                </thead>
-                                                                                                <tbody>
-                                                                                                    <tr>
-                                                                                                        <th scope="row">
-                                                                                                            1</th>
-                                                                                                        <td>Mark</td>
-                                                                                                        <td>Otto</td>
-                                                                                                    </tr>
-                                                                                                    <tr>
-                                                                                                        <th scope="row">
-                                                                                                            2</th>
-                                                                                                        <td>Jacob</td>
-                                                                                                        <td>Thornton
-                                                                                                        </td>
-                                                                                                    </tr>
-                                                                                                    <tr>
-                                                                                                        <th scope="row">
-                                                                                                            3</th>
-                                                                                                        <td>Larry</td>
-                                                                                                        <td>the Bird
-                                                                                                        </td>
-                                                                                                    </tr>
-                                                                                                </tbody>
-                                                                                            </table>
-                                                                                        </div>
-                                                                                    </div>
-                                                                                </section>
-                                                                            </div>
+                                                                            </div>                                                                        
                                                                         </div>
                                                                     </div>
                                                                 </div>
@@ -981,7 +760,7 @@
                                         <div class="tab-pane" id="linea">
                                             <div class="col-xl-12">
                                                 <div class="form-row">
-                                                    <div class="form-group col-md-4">
+                                                    <div class="form-group col-md-6">
                                                         <label for="name" class="control-label">Areas de
                                                             investigacion</label>
                                                         <select class="form-control" data-toggle="select2" name="pais">
@@ -996,13 +775,15 @@
                                                             </optgroup>
                                                         </select>
                                                     </div>
+                                                    <!--
                                                     <div class="form-group col-md-4 d-flex justify-content-end">
                                                         <button type="button"
                                                             class="btn btn-primary waves-effect waves-light btn-lg">Elija
                                                             sus areas
                                                             de investigacion</button>
                                                     </div>
-                                                    <div class="form-group col-md-4 d-flex justify-content-center">
+                                                    -->
+                                                    <div class="form-group col-md-6 d-flex justify-content-center">
                                                         <p class="text-muted mb-0">Quieres agregar una nueva Linea de
                                                             investigacion?
                                                             <a href="../controlador/LineaInvestigacion_controlador.php"
@@ -1200,6 +981,12 @@
                                                             disabled=""
                                                             value="<?php echo $matrizRegistro['nombre_investigador'];?>">
                                                         <?php endforeach;?>
+                                                    </div>
+                                                </div>
+
+                                                <div class="form-row">
+                                                    <div class="form-group col-md-12 d-flex justify-content-center">
+                                                        <a href="../controlador/actualizar_controlador.php" class="btn btn-primary waves-effect waves-light btn-lg">Actualizar Cuenta</a>
                                                     </div>
                                                 </div>
 
